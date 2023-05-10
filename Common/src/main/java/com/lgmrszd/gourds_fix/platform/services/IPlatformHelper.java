@@ -1,4 +1,4 @@
-package com.example.examplemod.platform.services;
+package com.lgmrszd.gourds_fix.platform.services;
 
 public interface IPlatformHelper {
 

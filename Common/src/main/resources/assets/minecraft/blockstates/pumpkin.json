@@ -1,0 +1,29 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "minecraft:block/pumpkin",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "minecraft:block/pumpkin",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "minecraft:block/pumpkin",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "minecraft:block/pumpkin",
+      "x": 270
+    },
+    "facing=up": {
+      "model": "minecraft:block/pumpkin"
+    },
+    "facing=west": {
+      "model": "minecraft:block/pumpkin",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

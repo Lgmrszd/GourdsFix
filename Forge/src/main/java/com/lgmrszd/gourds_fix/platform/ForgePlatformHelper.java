@@ -1,6 +1,6 @@
-package com.example.examplemod.platform;
+package com.lgmrszd.gourds_fix.platform;
 
-import com.example.examplemod.platform.services.IPlatformHelper;
+import com.lgmrszd.gourds_fix.platform.services.IPlatformHelper;
 import net.minecraftforge.fml.ModList;
 import net.minecraftforge.fml.loading.FMLLoader;
 

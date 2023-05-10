@@ -1,12 +1,12 @@
 {
     "required": true,
     "minVersion": "0.8",
-    "package": "com.example.examplemod.mixin",
+    "package": "com.lgmrszd.gourds_fix.mixin",
     "compatibilityLevel": "JAVA_17",
+    "refmap": "gourds_fix.refmap.json",
     "mixins": [
     ],
     "client": [
-      "ExampleMixin"
     ],
     "injectors": {
       "defaultRequire": 1
