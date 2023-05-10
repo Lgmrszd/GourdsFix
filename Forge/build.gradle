@@ -3,9 +3,18 @@ plugins {
     id 'eclipse'
     id 'maven-publish'
     id 'net.minecraftforge.gradle' version '5.1.+'
+    id 'org.spongepowered.mixin' version '0.7.+'
 }
 
-archivesBaseName = "${mod_name}-forge-${minecraft_version}"
+archivesBaseName = "${mod_name_nospace}-forge-${minecraft_version}"
+
+mixin {
+    add project(":Common").sourceSets.main, "${mod_id}.refmap.json"
+    add sourceSets.main, "${mod_id}.refmap.json"
+
+    config "${mod_id}.mixins.json"
+    config "${mod_id}-common.mixins.json"
+}
 
 minecraft {
     mappings channel: 'official', version: minecraft_version
@@ -67,10 +76,15 @@ sourceSets.main.resources.srcDir 'src/generated/resources'
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
+
+    annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
+
     compileOnly project(":Common")
+
+    implementation fg.deobf("com.github.Virtuoel:Statement:${statement_version_forge}")
 }
 
-tasks.withType(JavaCompile) {
+tasks.withType(JavaCompile).configureEach {
     source(project(":Common").sourceSets.main.allSource)
 }
 
