@@ -7,7 +7,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.event.level.BlockEvent;
+import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import virtuoel.statement.api.StateRefresher;
@@ -32,7 +32,7 @@ public class GourdsFixForge {
     @SubscribeEvent
     public void onGrownEventPost(BlockEvent.CropGrowEvent.Post event) {
         BlockState state = event.getState();
-        LevelAccessor level = event.getLevel();
+        LevelAccessor level = event.getWorld();
         BlockPos pos = event.getPos();
         onStemGrowth(state, pos, level);
     }

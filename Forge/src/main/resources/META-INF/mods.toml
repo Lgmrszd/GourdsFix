@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[44,)"
+loaderVersion="[40,)"
 license="LGPL-3.0-only"
 issueTrackerURL="https://github.com/Lgmrszd/GourdsFix/issues"
 [[mods]]
@@ -16,17 +16,17 @@ Credit for Multiloader template goes to Darkhax and jaredlll08 (and also Nik-Kot
 [[dependencies.gourds_fix]]
     modId="forge"
     mandatory=true
-    versionRange="[44,)"
+    versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.gourds_fix]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.19.3,1.20)"
+    versionRange="[1.18.2,1.19)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.gourds_fix]]
     modId="statement"
     mandatory=true
-    versionRange="[4.2.5+1.19.3-forge,)"
+    versionRange="[4.2.5+1.18.2-forge,)"
     side="BOTH"
